@@ -1,0 +1,27 @@
+server:
+  port: 8086
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.107.129:3306/asbi?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: rootlyj
+  redis:
+    host: 139.196.107.129
+  rabbitmq:
+    host: 139.196.107.129
+    username: admin
+    password: admin
+    port: 5672
+feign:
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic

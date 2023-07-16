@@ -1,0 +1,28 @@
+server:
+  port: 8401
+spring:
+  mvc:
+    pathmatch:
+#      这是因为swagger3(knife4j)
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.107.129:3306/asbi?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: rootlyj
+  redis:
+    host: "139.196.107.129"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 50000
+        readTimeout: 50000
+        loggerLevel: basic

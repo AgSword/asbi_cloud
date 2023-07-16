@@ -36,11 +36,11 @@ spring:
           jwk-set-uri: 'http://localhost:8201/auth/rsa/publicKey' #配置RSA的公钥访问地址
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.196.107.129:3306/asbi?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://xxx.xxx.xxx.xxx:3306/asbi?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: rootlyj
   redis:
-    host: "139.196.107.129"
+    host: "xxx.xxx.xxx.xxx"
 secure:
   ignore:
     urls: #配置白名单路径
